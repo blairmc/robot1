@@ -1,2 +1,26 @@
-numpy>=1.26.4
+# requirements.txt
+# Core dependencies for robot1 (robotic weeder project)
+
+# Numerical & array processing
+numpy>=1.26.0
+
+# Computer vision (full version for local development with GUI)
 opencv-python>=4.10.0
+
+# Serial communication (Arduino, OpenMV, Jetson, etc.)
+pyserial>=3.5
+
+# Image loading / saving / basic manipulation (lighter alternative to OpenCV for some tasks)
+pillow>=10.4.0
+
+# Scientific computing & advanced image processing
+scipy>=1.14.0
+
+# Plotting & visualization (very useful for debugging vision algorithms)
+matplotlib>=3.9.0
+
+# Progress bars (helpful during long processing or training loops)
+tqdm>=4.66.0
+
+# HTTP requests (useful if connecting to an external LLM API later)
+requests>=2.32.0
