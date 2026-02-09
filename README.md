@@ -1,31 +1,28 @@
-# robot1: Robotic Weeder
+# robot1 – Robotic Weeder
 
-## Project Overview
-This repository contains the development of **robot1**, an autonomous robotic weeder designed to identify and remove weeds using a mechanical arm for pinching. The system integrates hardware for mobility and manipulation with software for vision-based detection and control.
+An autonomous robotic system designed to detect and mechanically remove weeds.
 
-### Key Features (Planned)
-- Mechanical weed removal via a pinching arm.
-- Differential drive system with two rear-driven wheels and two front caster wheels.
-- Vision system for weed detection using USB camera and OpenMV.
-- AI integration via LLM for advanced decision-making.
-- Power-efficient design suitable for field operations.
+## Current Status (as of February 2026)
 
-### Development Status
-- Early stage: Initial planning and component selection.
-- Environment: Developed using GitHub Codespaces on a Mac Mini.
+- Local development environment fully set up on Mac Mini
+- Python virtual environment created (Python 3.12)
+- Core dependencies installed via `requirements.txt` (numpy, opencv-python, pyserial, pillow, matplotlib, etc.)
+- USB camera successfully connected and recognized by the operating system
+- Initial OpenCV-based camera access scripts tested **locally** (camera opening and frame capture in progress)
+- Working locally with periodic commits and pushes to GitHub
 
-### Quick Start
-1. Clone the repository: `git clone https://github.com/blairmc/robot1.git`.
-2. Open in GitHub Codespaces for seamless development.
-3. Refer to `docs/setup.md` for detailed setup instructions.
+## Development Environment
 
-### Documentation
-- [Hardware Details](docs/hardware.md)
-- [Software Details](docs/software.md)
-- [Setup Guide](docs/setup.md)
+- Local machine: Mac Mini
+- IDE: Visual Studio Code
+- Version control: Git + GitHub[](https://github.com/blairmc/robot1)
+- Virtual environment: `venv/` (activated with `source venv/bin/activate`)
 
-### Contributing
-Contributions are welcome. Please open an issue for discussions or submit a pull request.
+## Next Major Milestones
 
-### License
-[MIT License](LICENSE) (to be added).
+- Confirm reliable USB camera frame capture and live preview
+- Implement basic plant/weed detection (color-based or simple ML)
+- Establish serial communication with Arduino controller
+- Design and document initial mechanical/weeding subsystem
+
+See [docs/progress.md](docs/progress.md) for more detailed progress tracking.
