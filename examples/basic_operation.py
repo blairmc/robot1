@@ -25,6 +25,11 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+# Movement pattern constants
+PATTERN_CYCLE_LENGTH = 4
+TURN_SPEED = 25
+FORWARD_SPEED = 30
+
 
 def main():
     """Main example function."""
@@ -79,16 +84,16 @@ def main():
                     logger.info("Weed location marked")
             
             # Simple movement pattern (example)
-            if i % 4 == 0:
+            if i % PATTERN_CYCLE_LENGTH == 0:
                 logger.info("Moving forward...")
-                motors.move_forward(speed=30)
-            elif i % 4 == 1:
+                motors.move_forward(speed=FORWARD_SPEED)
+            elif i % PATTERN_CYCLE_LENGTH == 1:
                 logger.info("Turning left...")
-                motors.turn_left(speed=25)
-            elif i % 4 == 2:
+                motors.turn_left(speed=TURN_SPEED)
+            elif i % PATTERN_CYCLE_LENGTH == 2:
                 logger.info("Moving forward...")
-                motors.move_forward(speed=30)
-            elif i % 4 == 3:
+                motors.move_forward(speed=FORWARD_SPEED)
+            elif i % PATTERN_CYCLE_LENGTH == 3:
                 logger.info("Stopping...")
                 motors.stop()
             

@@ -35,7 +35,8 @@ const int VOLTAGE_PIN = A2;
 const int CURRENT_PIN = A3;
 
 // Voltage divider ratio (24V to 5V)
-const float VOLTAGE_DIVIDER_RATIO = 5.0;
+// Using 38kΩ and 10kΩ resistors: (38kΩ + 10kΩ) / 10kΩ = 4.8
+const float VOLTAGE_DIVIDER_RATIO = 4.8;
 
 void setup() {
   Serial.begin(115200);
